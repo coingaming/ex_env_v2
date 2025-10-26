@@ -28,8 +28,8 @@ defmodule ExEnv.MixProject do
       ],
       # ex_doc
       name: "ExEnv",
-      source_url: "https://github.com/coingaming/ex_env",
-      homepage_url: "https://github.com/coingaming/ex_env",
+      source_url: "https://github.com/coingaming/ex_env_v2",
+      homepage_url: "https://github.com/coingaming/ex_env_v2",
       docs: [main: "readme", extras: ["README.md"]],
       # hex.pm stuff
       description: "Tool provides support of Elixir terms in system env variables",
@@ -38,7 +38,7 @@ defmodule ExEnv.MixProject do
         files: ["lib", "priv", "mix.exs", "README*", "VERSION*"],
         maintainers: ["tim2CF"],
         links: %{
-          "GitHub" => "https://github.com/coingaming/ex_env"
+          "GitHub" => "https://github.com/coingaming/ex_env_v2"
         }
       ]
     ]
