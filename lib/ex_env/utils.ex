@@ -14,8 +14,15 @@ defmodule ExEnv.Utils do
     ```
     iex> ExEnv.Utils.validate_otp_app(:hello_world)
     :ok
+
     iex> ExEnv.Utils.validate_otp_app(:hello_123)
-    ** (RuntimeError) invalid OTP application name hello_123
+    :ok
+
+    iex> ExEnv.Utils.validate_otp_app(:"123_hello")
+    ** (RuntimeError) invalid OTP application name 123_hello
+
+    iex> ExEnv.Utils.validate_otp_app(:"Hello_World")
+    ** (RuntimeError) invalid OTP application name Hello_World
     ```
 
   """

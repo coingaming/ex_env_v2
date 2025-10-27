@@ -34,8 +34,8 @@ defmodule ExEnv.MixProject do
       # hex.pm stuff
       description: "Tool provides support of Elixir terms in system env variables",
       package: [
-        licenses: ["Apache 2.0"],
-        files: ["lib", "priv", "mix.exs", "README*", "VERSION*"],
+        licenses: ["Apache-2.0"],
+        files: ["lib", "mix.exs", "README*", "VERSION*", "LICENSE"],
         maintainers: ["tim2CF"],
         links: %{
           "GitHub" => "https://github.com/coingaming/ex_env_v2"
@@ -55,10 +55,10 @@ defmodule ExEnv.MixProject do
   defp deps do
     [
       # development tools
-      {:excoveralls, "~> 0.8", only: [:dev, :test], runtime: false},
-      {:dialyxir, "~> 0.5", only: [:dev, :test], runtime: false},
-      {:ex_doc, "~> 0.19", only: [:dev, :test], runtime: false},
-      {:credo, "~> 0.9", only: [:dev, :test], runtime: false},
+      {:excoveralls, "~> 0.18", only: [:dev, :test], runtime: false},
+      {:dialyxir, "~> 1.4", only: [:dev, :test], runtime: false},
+      {:ex_doc, "~> 0.34", only: [:dev, :test], runtime: false},
+      {:credo, "~> 1.7", only: [:dev, :test], runtime: false},
       {:boilex, "~> 0.2.7", only: [:dev, :test], runtime: false}
     ]
   end
