@@ -2,6 +2,7 @@
 
 Tool provides support of Elixir terms in system env variables.
 For security reasons only literals/terms are allowed in configs (no functions, macros, modules etc).
+Date and time sigils (`~D`, `~T`, `~N`, `~U`) with the default `Calendar.ISO` calendar are allowed.
 I very recommend to combine this tool with [BootEnv](https://github.com/coingaming/boot_env).
 
 # Installation
@@ -37,6 +38,10 @@ export BEST_APP_CONFIG="                                          \
     {                                                             \
       :workers_pool_size,                                         \
       100                                                         \
+    },                                                            \
+    {                                                             \
+      :launch_date,                                               \
+      ~D[2026-09-09]                                              \
     }                                                             \
   ]                                                               \
 "
@@ -53,6 +58,8 @@ use ExEnv # put this line to the bottom of file
 ```elixir
 iex> Application.get_env(:best_app, :workers_pool_size)
 100
+iex> Application.get_env(:best_app, :launch_date)
+~D[2026-09-09]
 iex> Application.get_env(:best_app, BestApp.Repo)
 [
   adapter: Ecto.Adapters.Postgres,
