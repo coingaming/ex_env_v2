@@ -8,7 +8,7 @@ I very recommend to combine this tool with [BootEnv](https://github.com/coingami
 # Installation
 
 ```
-mix archive.install hex ex_env 0.3.4 --force
+mix archive.install hex ex_env 0.3.5 --force
 ```
 
 # Usage
